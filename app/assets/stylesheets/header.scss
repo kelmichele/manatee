@@ -1,0 +1,36 @@
+@import "mixins";
+@import "variables";
+
+
+header {
+	@include sec-default();
+	background-color: $white;
+	padding-top:25px;
+	height: 90px;
+}
+
+.header-box{
+	width: 85%; @include center-block(); background-color: $dk-blue; position: relative; z-index: 10; height:125px;
+
+	.logo-block {width: 25%; display: inline-block; float: left; position: relative; background-color: $blue; height: 100%;}
+	.info-block {width: 75%; display: inline-block; color: $white; padding: 15px 0 8px; text-align: center;
+		.phone, .address, .contact {display: inline-block; width: 30%; margin:auto;}
+		.phone {float: left;}
+		.contact {float: none;}
+		.address {float: right;}
+	}
+
+	hr.header {width:90%; margin: 20px auto 0px; border-top: 1px solid rgba($offwhite, .3);}
+
+	.nav-bottom {width: 75%; float: right; background-color: $dk-blue; text-align: center; padding:5px 0;}
+	li.menu-item {display: inline-block; margin-right: 25px;
+		a {color: $offwhite;}
+	}
+}
+
+@include bp(md) {
+
+	.header-box{ width: 90%;
+		.info-block { padding: 15px 10px;}
+	}
+}

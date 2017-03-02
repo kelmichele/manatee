@@ -1,0 +1,33 @@
+<header>
+	<div class="header-box">
+			<div class="logo-block"><%= link_to(image_tag( 'manatee-logo.jpg', alt: 'Manatee Ship Repair & Fabrication Logo', class: 'img-responsive logo-img'), root_path ) %></div>
+	    <div class="info-block">
+	    	<!-- <div class="contact-top"> -->
+		    	<div class="phone">
+		    		908 285 0912<br>
+		    		727 212 5234
+		    	</div>
+
+		    	<div class="contact">
+		    		frank@manateeshiprepair.com<br>
+		    		jim@manateeshiprepair.com
+		    	</div>
+
+		    	<div class="address">
+		    		13604 Reeder Road<br>
+		    		Palmetto, FL 34221
+		    	</div>
+		    <!-- </div> -->
+				<hr class="header">
+		  </div>
+
+			<div class="nav-bottom">
+				<ul class="site-nav">
+			    <li class="menu-item"><%= link_to "Home", root_path %></li>
+			    <li class="menu-item"><%= link_to "All Services", services_path %></li>
+			    <li class="menu-item"><%= link_to "Bondstrand Pipe Repair", bondstrand_pipe_path %></li>
+			    <li class="menu-item"><%= link_to "Contact", contact_path %></li>
+				</ul>
+			</div>
+  </div>
+</header>
