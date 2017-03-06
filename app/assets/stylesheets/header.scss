@@ -22,9 +22,10 @@ header {
 
 	hr.header {width:90%; margin: 20px auto 0px; border-top: 1px solid rgba($offwhite, .3);}
 
-	.nav-bottom {width: 75%; float: right; background-color: $dk-blue; text-align: center; padding:5px 0;}
-	li.menu-item {display: inline-block; margin-right: 25px;
-		a {color: $offwhite;}
+	.nav-bottom {width: 75%; float: right; background-color: $dk-blue; padding-left: 40px;}
+	// ul {float: right;}
+	li.menu-item {display: inline-block; padding-top: 6px; margin-right: 50px;
+		a {color: $offwhite; font-size: 15px; float: right;}
 	}
 }
 
