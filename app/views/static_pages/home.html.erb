@@ -1,32 +1,7 @@
 <% @page_title = "Manatee Ship Repair & Fabrication" %>
 <% @page_description = "New Subject" %>
 
-	<script>document.documentElement.className = 'js';</script>
-	<section class="demo-1">
-		<main>
-			<div class="segmenter"></div>
-			<div class="trigger-headline trigger-headline--hidden">
-				<!-- <h1><span>M</span><span>A</span><span>N</span><span>A</span><span>T</span><span>E</span><span>E</span></h1>
-				<h2><span>SHIP</span> <span>REPAIR</span> <span>&amp;</span> <span>FABRICATION</span></h2> -->
-				<h1>Manatee</h1>
-				<h2>Ship Repair &amp; Fabrication</h2>
-			</div>
-		</main>
-		<script>
-		(function() {
-			var headline = document.querySelector('.trigger-headline'),
-				trigger = document.querySelector('.segmenter'),
-				segmenter = new Segmenter(document.querySelector('.segmenter'), {
-					onReady: function() {
-						// trigger.addEventListener('mousemove', function() {
-							segmenter.animate();
-							headline.classList.remove('trigger-headline--hidden');
-						// });
-					}
-				});
-		})();
-		</script>
-	</section>
+  <%= render 'static_pages/segmenter' %>
 
 	<section class="main-content">
 		<div class="container">

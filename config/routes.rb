@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/bondstrand-pipe', to: 'static_pages#bondstrand-pipe'
   get '/contact', to: 'static_pages#contact'
   get '/photos', to: 'static_pages#photos'
+
+  get '/gallery', to: 'photos#index', as: 'gallery'
 end

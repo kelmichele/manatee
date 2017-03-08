@@ -1,0 +1,27 @@
+	<script>document.documentElement.className = 'js';</script>
+	<section class="demo-1">
+		<main>
+			<div class="segmenter"></div>
+			<div class="trigger-headline trigger-headline--hidden">
+				<% unless current_page?(root_path) %>
+						<h1><%= @page_title%></h1>
+						<h2>MANATEE SHIP REPAIR &amp; FABRICATION</h2>
+					<% else %>
+						<h1>Manatee</h1>
+						<h2>Ship Repair &amp; Fabrication</h2>
+				<% end %>
+			</div>
+		</main>
+		<script>
+		(function() {
+			var headline = document.querySelector('.trigger-headline'),
+				trigger = document.querySelector('.segmenter'),
+				segmenter = new Segmenter(document.querySelector('.segmenter'), {
+					onReady: function() {
+							segmenter.animate();
+							headline.classList.remove('trigger-headline--hidden');
+					}
+				});
+		})();
+		</script>
+	</section>

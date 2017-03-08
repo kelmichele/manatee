@@ -1,0 +1,66 @@
+<div class="gallery">
+	<section class="demo-1">
+		<main>
+			<div class="segmenter"></div>
+			<div class="trigger-headline trigger-headline--hidden">
+				<h2>MANATEE PROJECT GALLERY</h2>
+			</div>
+		</main>
+	</section>
+
+
+<section class="main-content">
+	<div class="container">
+
+			<% target = "world" %>
+			<%= "Hello #{target}" %>
+
+			<div class="clearfix"></div><br><br>
+			<br />
+
+			<% @array.each do |n| %>
+			  <%= n %><br />
+			<% end %>
+
+			<div class="clearfix"></div><br><br><br />
+
+			<%= @photo %><br>
+
+			<div class="clearfix"></div><br>
+
+			 <!--image.each do %>
+		    	<%= link_to(image_tag('gallery/#@image_src', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - #@image_id', class: 'img-responsive'), image_path('#@image_path'), data: { lightbox: "example-set", title: '#@image_title' }) %>-->
+
+				<div class="clearfix"></div><br><br>
+
+    		 <!-- image1 = Photo.new("1", "gallery1.jpg", "gallery1.jpg", "Image 1")  -->
+
+
+    		<% $i = 0 %>
+    		<% $num = 7 %>
+				<% while $i < $num  do %>
+
+				  <%= $i +=1 %>
+				  <br>
+				<% end %>
+
+
+    <!-- 		<% lines = [] %>
+    		<% IO.foreach("list.txt") do |line| %>
+    		  <br />
+    		  <%= lines.push(line.chomp()) %>
+					<br />
+    		<% end %>
+ -->
+
+
+				<div class="clearfix"></div><br><br>
+
+    <!-- 		<% lines.each do |v| %>
+				  <%= v %>
+				  <br />
+    		<% end %> -->
+
+		</div>
+	</section>
+</div>

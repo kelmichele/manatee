@@ -68,39 +68,39 @@
 
 .services {
 	.segmenter {
-		height: 38vh;
+		height: 47vh;
 		z-index: 0;
-		// height: 44vh;
-		// background-image: url(image_path('msr7.jpg')), url(image_path('msr6.jpg')), url(image_path('msr8.jpg'));
-		// background-position: top left, top center, top right;
-		// background-size: 34%, 33.5%, 33.5%;
-
-		// background-image: url(image_path('msr7.jpg')), url(image_path('msr8.jpg'));
-		// background-position: top left, top right;
-		// background-size: 50.5%, 50%;
-		background-image: url(image_path('msr7.jpg'));
+		background-image: url(image_path('welding1.jpg'));
+		// background-image: url(image_path('msr7.jpg'));
 		background-position: center center;
-
-		&::before {
-			@include before ();
-			background-color: rgba($white, .3);
-		}
 	}
 
-	.trigger-headline { padding-top:12%;
+	.trigger-headline { padding-top:14%;
 		h1 {letter-spacing: 1.5vw; font-weight: bold; font-size: 4vw;}
 		h2 {letter-spacing: .7vw; font-weight: bold; font-size: 2vw;}
 	}
+	p {font-size: 16px; }
 
-	.main-section {@include sec-default(); background-color: $offwhite; }
-	.intro-box { width: 35%; float: left; display: inline-block;
-		.top {@include sec-default(); padding: 50px; padding-left: 120px;}
-		.bottom {@include sec-default(); padding: 25px; padding-left: 120px; background-color: $blue; color: $white;}
-		p {font-size: 16px; }}
-	.content-box { width: 65%; display: inline-block; float: none; background-color: $white; padding: 30px 50px 20px 40px;
-		// background-image: url(image_path('msr2.jpg')); background-position: center right; background-size: 55%; background-repeat: no-repeat; background-origin: content-box;
-		h4 {color: $blue; font-weight: bold; margin-bottom: 4px;}
-		ul { padding-left: 15px; margin-bottom:25px;}
+	.intro-banner {@include sec-default(); padding-bottom:40px;
+		.block1 {width:70%; @include center-block(); background-color: $white; padding: 20px; padding-left:35px; margin-top: -3%; position: relative; z-index: 10;}
+		img{display: inline-block; width:31%; float: left; padding-right: 10px;}
+		.text {display: inline-block; width: 67%; float: none; padding: 25px 30px 0;}
+		h4 {color: $blue; font-weight: bold;}
+		p {padding: 20px 0;}
+	}
+
+	.top {@include sec-default(); padding: 20px 0 10px; background-color: $dk-blue; text-align: center;
+		h3 {font-weight: bold; color: $white;}
+	}
+
+	.lists {@include sec-default(); padding:0;
+		.one, .two {display: inline-block; width: 25%; padding:5px 0px 0px 20px; background-color: $white; vertical-align: top; }
+		.one-b, .two-b {width: 24.7%; display: inline-block; height:380px; padding:0;
+			@include sec-bgimage();background-image: url(image_path('msrcrew.jpg'));
+		}
+		.two-b {float: right;background-image: url(image_path('msr7.jpg'));}
+		h4 {color: $blue; font-weight: bold; margin-bottom: 4px; &.last {margin:0} }
+		ul { padding-left: 15px; margin-bottom:15px;}
 		li {margin-bottom: 10px; font-size: 16px;}
 	}
 }
@@ -209,8 +209,50 @@
 	}
 }
 
+.photos, .gallery {
+	.segmenter {
+		height: 35vh;
+		background-image: url(image_path('manatee1.jpg'));
+	}
+	.main-content{background-color: $offwhite;}
+}
 
+.contact {
+	.segmenter {
+		height: 50vh;
+		background-image: url(image_path('manatee1.jpg'));
+	}
 
+	.banner { padding: 35px 0;}
+	.contact-box { @include sec-default(); padding:30px; background-color: $blue; color: $white;}
+
+	.top { margin: 50px auto; width:90%; @include center-block(); padding:270px 40px 150px; background-color: $blue; color: $white; position: relative; z-index: -1;
+		h4 {color: $white;}
+
+		&::before {
+			content: "";
+			width: 104%;
+			height: 350px;
+			background-color: $white;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 1;
+			left:-20px;
+			top: -20%;
+		}
+		&::after {
+			content: "";
+			width: 104%;
+			height: 200px;
+			background-color: $white;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 1;
+			left:-20px;
+			bottom: -10%;
+		}
+	}
+}
 
 
 

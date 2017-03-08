@@ -1,0 +1,4 @@
+image1=["sponsors-ip.png", "IP Casino", "http://www.ipbiloxi.com/"]
+image2=["sponsors-hub.jpg", "Hub City", "http://www.ehubcity.com/"]
+image3=["sponsors-hd.jpg", "Emerald Coast Harley Davidson", "http://www.emeraldcoasthd.com/"]
+image4=["sponsors-fpc.jpg", "Florida Power Boat Club", "http://flpowerboat.com/"]

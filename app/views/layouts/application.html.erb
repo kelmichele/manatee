@@ -6,8 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <%= render 'layouts/rails_default' %>
+    <meta name="description" content= "<%= @page_description %>">
+    <link rel="shortcut icon" href="favicon.png">
+    <title><%= @page_title %> | Manatee Ship Repair &amp; Fabrication Logo</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
 
@@ -19,5 +23,6 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
+       <!-- javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  -->
   </body>
 </html>
