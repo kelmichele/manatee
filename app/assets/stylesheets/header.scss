@@ -10,7 +10,7 @@ header {
 }
 
 .header-box{
-	width: 85%; @include center-block(); background-color: $dk-blue; position: relative; z-index: 10; height:125px;
+	width: 70%; @include center-block(); background-color: $dk-blue; position: relative; z-index: 10; height:125px;
 
 	.logo-block {width: 25%; display: inline-block; float: left; position: relative; background-color: $blue; height: 100%;}
 	.info-block {width: 75%; display: inline-block; color: $white; padding: 15px 0 8px; text-align: center;
