@@ -42,6 +42,15 @@
     z-index: -1;
 }
 
+@mixin before-sm() {
+    content: "";
+    position: absolute;
+    height:100%;
+    top: 0;
+    width: 50%;
+    z-index: -1;
+}
+
 @mixin ease() {
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;

@@ -4,36 +4,50 @@
   <%= render 'static_pages/segmenter' %>
 
 	<section class="main-content">
-		<div class="container">
-			<div class="banner one">
-				<h3>Strategically located at the mouth of the Tampa Bay</h3>
-				<h4>Manatee Ship Repair &amp; Fabrication offers convenient service for all vessels trading in the Gulf of Mexico and Western Caribbean Sea. Our company leaders have over 80 years of combined experience in vessel repair and fabrication.</h4>
+		<div class="intro-card">
+			<div class="block left">
+				<%= image_tag('block3-ship.jpg', alt: 'Manatee Ship Repair and Fabrication, property image', class: 'img-responsive') %>
 			</div>
 
-			<div class="row mc-1">
-					<div class="col-md-4 img-hlf">
-						<%= image_tag('manatee3.jpg', alt: 'Manatee Ship Repair and Fabrication, property image', class: 'img-responsive img1') %> <br>
-							<div class="col-md-6 pleft-0"><%= image_tag('manatee3.jpg', alt: 'Manatee Ship Repair and Fabrication, property image', class: 'img-responsive img2') %></div>
-							<div class="col-md-6 pright-0"><%= image_tag('manatee3.jpg', alt: 'Manatee Ship Repair and Fabrication, property image', class: 'img-responsive img3') %></div>
-					</div>
+			<div class="block right">
+				<div class="text-box">
+					<!-- <h3><span>We are conveniently located</span><br> at the mouth of the Tampa Bay</h3>
+					<p>Vessel repairs are typically urgent situations that require immediate attention.
+					If your vessel is in need of emergency service, accessibility is a huge asset in a repair team.</p>
+					<p><b>Manatee Ship Repair &amp; Fabrication's strategic location allows us to offer timely service to all vessels trading in the Gulf of Mexico and Western Caribbean Sea.
+					</b></p> -->
 
-					<div class="col-md-8 text-hlf">
-							<h3><span>We offer</span><br>
-								Topside Ship Repairs of all Nature</h3>
+					<h3>We offer Topside Ship Repairs of all Nature.</h3>
+					<p>Manatee Ship Repair and Fabrication has a reputation for prompt, cost effective service, and attention to detail.
+					Our team guarantees professional, quality work on every project. Our company leaders have over 80 years of combined experience in vessel repair and fabrication.
 
-							<h3><span>We specialize in</span><br>
-								Bondstrand Pipe Repair and Fabrication</h3>
+					<p class="last">Our specialties include Bondstrand Pipe Repair and Fabrication. We can accomodate any Bondstrand project, land or sea.</p>
+					<div class="clearfix"></div>
+					<%= link_to 'View Our Services', services_path, class: 'service-link left' %>
+					<%= link_to 'Bondstrand Pipe Repair', bondstrand_pipe_path, class: 'service-link' %>
+				</div>
+			</div>
+		</div>
 
-							<h3><span>We have a reputation for</span><br>
-								Prompt, Cost Effective Service, and Attention to Detail</h3>
-					</div>
+		<div class="bg-overlay">
+			<div class="left">
+				<div class="inner">
+					<h3><span>We are conveniently located</span><br> at the mouth of the Tampa Bay</h3>
+					<div class="title-line"></div>
+					<p>Vessel repairs are typically urgent situations that require immediate attention.<br>
+					If your vessel is in need of emergency service, accessibility is a huge asset in a repair team.</p>
+					<p class="last">Manatee Ship Repair &amp; Fabrication's strategic location allows us to offer timely service to all vessels trading in the Gulf of Mexico and Western Caribbean Sea.</p>
+				</div>
 			</div>
 
-
-		<!-- Valves, Pumps, Winches, Hatch Covers, Structural Repairs, Air Conditioning, Electrical, Hydraulic Systems, Pneumatic Systems, Joinery -->
-
-		<!-- We would be honored to bid your repair job and earn your business. Contact us today by phone or email for prompt service and availability. -->
-	</div>
+			<div class="right">
+				<div class="inner">
+					<h3>Contact us today for an estimate on your vessel repair or fabrication project.</h3>
+				</div>
+			</div>
+		</div>
 </section>
-<!--Manatee Ship Repair and Fabrication has a history of prompt, cost effective service, and attention to detail.
-Contact us today for an estimate on your vessel repair or fabrication project.-->
+
+
+<!-- Valves, Pumps, Winches, Hatch Covers, Structural Repairs, Air Conditioning, Electrical, Hydraulic Systems, Pneumatic Systems, Joinery -->
+<!-- We would be honored to bid your repair job and earn your business. Contact us today by phone or email for prompt service and availability. -->
