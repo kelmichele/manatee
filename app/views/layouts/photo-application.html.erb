@@ -1,0 +1,27 @@
+<!-- http://manateeshiprepair.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content= "<%= @page_description %>">
+    <link rel="shortcut icon" href="favicon.png">
+    <title><%= @page_title %> | Manatee Ship Repair &amp; Fabrication Logo</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
+  </head>
+
+    <body class=" <%= controller_name %> <%= action_name %>">
+      <%= render 'layouts/header' %>
+
+      <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>

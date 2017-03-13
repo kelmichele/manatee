@@ -1,0 +1,20 @@
+<div class="clearfix"></div><br><br>
+<div class="clearfix"></div><br><br>
+<div class="clearfix"></div><br><br>
+
+<div class="container">
+		<% @array.each do |n| %>
+		  <%= n %><br />
+		<% end %>
+
+		<br />
+
+		ID: <%= @id %><br />
+		ID: <%= params[:id] %><br />
+		Page: <%= @page %><br />
+		Next page: <%= @page.to_i + 1 %><br />
+</div>
+
+<div class="clearfix"></div><br><br>
+<div class="clearfix"></div><br><br>
+<div class="clearfix"></div><br><br>

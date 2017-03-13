@@ -11,7 +11,7 @@
     <title><%= @page_title %> | Manatee Ship Repair &amp; Fabrication Logo</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% unless current_page?(photos_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
     <%= render 'layouts/shim' %>
   </head>
 
@@ -23,6 +23,6 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
-       <!-- javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  -->
+      <% if current_page?(photos_path) %> <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> <% end %>
   </body>
 </html>

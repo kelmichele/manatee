@@ -10,92 +10,18 @@
 		</main>
 	</section>
 
-	<!-- Photo.new("gallery1.jpg", "1", "gallery1.jpg", "Image 1") -->
+	<!-- <%= link_to(image_tag('gallery/manatee-project.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 4', class: 'img-responsive gall'), image_path('gallery/manatee-project.jpg'), data: { lightbox: "example-set", title: 'Image ' }) %>  -->
 
-<section class="main-content">
-	<div class="container">
-		<h3>A Four Image Set</h3>
-		<div>
-     <%= link_to(image_tag('http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg'), image_path('http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg'), data: { lightbox: "example-set", title: 'first photo' }) %>
+<section class="project-gallery">
+	<div>
+		<%= link_to(image_tag('gallery/manatee-project1.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 1', class: 'img-responsive gall'), image_path('gallery/manatee-project1.jpg'), data: { lightbox: "example-set", title: 'Image 1' }) %>
 
-			<!-- link_to(image_tag('gallery/#@image_src', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - #@image_id', class: 'img-responsive'), image_path('#@image_path'), data: { lightbox: "example-set", title: '#@image_title' }) -->
+    <%= link_to(image_tag('gallery/manatee-project2.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 2', class: 'img-responsive gall'), image_path('gallery/manatee-project2.jpg'), data: { lightbox: "example-set", title: 'Image 2' }) %>
 
-				 	photo1.show_photo()
+    <%= link_to(image_tag('gallery/manatee-project3.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 3', class: 'img-responsive gall'), image_path('gallery/manatee-project3.jpg'), data: { lightbox: "example-set", title: 'Image 3' }) %>
 
+    <%= link_to(image_tag('gallery/manatee-project4.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 4', class: 'img-responsive gall'), image_path('gallery/manatee-project4.jpg'), data: { lightbox: "example-set", title: 'Image 4' }) %>
 
-			     <%= link_to(image_tag('gallery/#@image_src', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - #@image_alt', class: 'img-responsive'), image_path('#@image_path'), data: { lightbox: "example-set", title: '#@image_title' }) %>
-
-
-
-			<a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard.">
-				<img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" />
-			</a>
-
-			<a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing.">
-				<img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" />
-			</a>
-
-			<a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close.">
-				<img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" />
-			</a>
-		</div>
+    <%= link_to(image_tag('gallery/manatee-project5.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 4', class: 'img-responsive gall'), image_path('gallery/manatee-project5.jpg'), data: { lightbox: "example-set", title: 'Image 5' }) %>
 	</div>
 </section>
-
-
- <!--  # Create an empty array.
-    lines = []
-    # Use foreach iterator to loop over lines in the file.
-    # ... Add chomped lines.
-    IO.foreach("list.txt") do |line|
-      lines.push(line.chomp())
-    end
-
-
-    lines.each do |v|
-
-    end -->
-
-<!-- <div>
- @photos.each do |photo|
-     link_to(image_tag(attachment_url(photo, :image, :fit, 100, 100, format: 'jpg')), attachment_url(photo, :image, :fit, 500, 500, format: 'jpg'), data: { lightbox: "example-set", title: photo.name })
-     < equal link_to(image_tag('gallery/#@image_src', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - #@image_alt', class: 'img-responsive'), image_path('#@image_path'), data: { lightbox: "example-set", title: '#@image_title' }) >
-   end
-</div> -->
-
-<!--
-  class Photo
-    def initialize(id, image, name, link )
-      @image_src=src
-      @image_id=id
-      @image_path=path
-      @image_title=title
-    end
-
-    def show_photo()
-      puts "< equal link_to(image_tag('gallery/#@image_src', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - #@image_alt', class: 'img-responsive'), image_path('#@image_path'), data: { lightbox: "example-set", title: '#@image_title' }) >"
-    end
-  end
-  # Create Objects
-  photo1=Photo.new("gallery1.jpg", "1", "gallery1.jpg", "Image 1")
-
-  # Call Methods
-  photo1.show_photo()
- -->
- <!-- resources :sponsors, :only => [:show] -->
-
-
-
-<!--  # Create an empty array.
-lines = []
-# Use foreach iterator to loop over lines in the file.
-# ... Add chomped lines.
-IO.foreach("list.txt") do |line|
-    lines.push(line.chomp())
-end
-
-
-lines.each do |v|
-
-end -->
-
