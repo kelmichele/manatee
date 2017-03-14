@@ -10,6 +10,33 @@
 	@include bp(md) {padding: 15px 0; }
 }
 
+.bg-slant {
+	position: relative;
+	top: 0;
+	clear: both;
+
+	&:before, &:after {
+		border-top: 0 solid $white;
+		border-bottom: 450px solid $white;
+		top: 0;
+		width: 40%;
+		content: "";
+		height: 100%;
+		position: absolute;
+	}
+	&:before {
+		border-left: 0 solid transparent;
+		border-right: 300px solid transparent;
+		left:0;
+	}
+
+	&:after {
+		border-right: 0 solid transparent;
+		border-left: 600px solid transparent;
+		right:0;
+	}
+}
+
 .trigger-headline {color: $white; @include tshadow ($dark); padding-top:15%;
 	h1 {letter-spacing: 4vw; font-weight: bold; font-size: 6vw; margin-bottom: 0;
 		span {padding: 0 2vw; font-weight: bold; font-size: 6vw;}
@@ -24,8 +51,6 @@
 		height: 85vh;
 		background-image: url(image_path('manatee1.jpg'));
 		background-position: center center;
-		// background-position: bottom center;
-		// background-image: url(image_path('msr4.jpg'));
 	}
 	.trigger-headline { padding-top:13.5%;}
 
@@ -110,7 +135,6 @@
 		height: 40vh;
 		z-index: 0;
 		background-image: url(image_path('welding2.jpg'));
-		// background-image: url(image_path('msr8-bw.jpg'));
 		background-position: center center;
 	}
 
@@ -163,7 +187,6 @@
 	.segmenter {
 		height: 50vh;
 		background-image: url(image_path('msr6-bw.jpg'));
-		// background-image: url(image_path('msr6.jpg'));
 		background-position: bottom center;
 		z-index: 0;
 
@@ -277,39 +300,54 @@
 }
 
 .contact {
+
 	.segmenter {
-		height: 50vh;
-		background-image: url(image_path('manatee1.jpg'));
+		height: 40vh;
+		background-image: url(image_path('manatee3-bw.jpg'));
+		background-position: center bottom;
+	}
+	.trigger-headline {padding-top:18%;
+		h1 {letter-spacing: 3vw; font-size: 4.5vw;;}
+		h2 {letter-spacing: 1vw; font-weight: bold; font-size: 2vw; }
 	}
 
-	.banner { padding: 35px 0;}
+	.banner {
+		@include sec-default();
+		height:400px;
+		@include sec-bgimage();
+		background-size: 50%;
+		background-position: top right;
+		background-image: url(image_path('block3-ship.jpg'));
+
+		.left{width:50%; padding: 60px; float: left; display: inline-block;}
+	}
 	.contact-box { @include sec-default(); padding:30px; background-color: $blue; color: $white;}
 
 	.top { margin: 50px auto; width:90%; @include center-block(); padding:270px 40px 150px; background-color: $blue; color: $white; position: relative; z-index: -1;
 		h4 {color: $white;}
 
-		&::before {
-			content: "";
-			width: 104%;
-			height: 350px;
-			background-color: $white;
-			border-radius: 50%;
-			position: absolute;
-			z-index: 1;
-			left:-20px;
-			top: -20%;
-		}
-		&::after {
-			content: "";
-			width: 104%;
-			height: 200px;
-			background-color: $white;
-			border-radius: 50%;
-			position: absolute;
-			z-index: 1;
-			left:-20px;
-			bottom: -10%;
-		}
+		// &::before {
+		// 	content: "";
+		// 	width: 104%;
+		// 	height: 350px;
+		// 	background-color: $white;
+		// 	border-radius: 50%;
+		// 	position: absolute;
+		// 	z-index: 1;
+		// 	left:-20px;
+		// 	top: -20%;
+		// }
+		// &::after {
+		// 	content: "";
+		// 	width: 104%;
+		// 	height: 200px;
+		// 	background-color: $white;
+		// 	border-radius: 50%;
+		// 	position: absolute;
+		// 	z-index: 1;
+		// 	left:-20px;
+		// 	bottom: -10%;
+		// }
 	}
 }
 
@@ -362,13 +400,6 @@
 		.contact-link { position: absolute; width:22%; left: 5%; margin-top: 10%; padding: 40px; text-align: center; background-color: $teal; color: $white; font-size: 20px;}
 	}
 }
-
-
-
-
-
-
-
 
 
 
