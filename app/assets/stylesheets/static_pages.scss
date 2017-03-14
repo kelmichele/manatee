@@ -302,12 +302,12 @@
 .contact {
 
 	.segmenter {
-		height: 40vh;
+		height: 50vh;
 		background-image: url(image_path('manatee3-bw.jpg'));
-		background-position: center bottom;
+		background-position: center center;
 	}
 	.trigger-headline {padding-top:18%;
-		h1 {letter-spacing: 3vw; font-size: 4.5vw;;}
+		h1 {letter-spacing: 2vw; font-size: 4.5vw; color: $teal;}
 		h2 {letter-spacing: 1vw; font-weight: bold; font-size: 2vw; }
 	}
 
@@ -317,7 +317,7 @@
 		@include sec-bgimage();
 		background-size: 50%;
 		background-position: top right;
-		background-image: url(image_path('block3-ship.jpg'));
+		// background-image: url(image_path('block3-ship.jpg'));
 
 		.left{width:50%; padding: 60px; float: left; display: inline-block;}
 	}
