@@ -1,12 +1,6 @@
-<header>
-	<!-- <div class="top">
-		<div class="phone">941-417-2613</div>
-		<div class="contact">info@manateeshiprepair.com</div>
-	</div>
-	<div class="clearfix"></div> -->
-
+<!-- <header class="h1">
 	<div class="header-box">
-		<div class="logo-block"><%= link_to(image_tag( 'manatee-logo.jpg', alt: 'Manatee Ship Repair & Fabrication Logo', class: 'img-responsive logo-img'), root_path ) %></div>
+		<div class="logo-block"><%= link_to(image_tag( 'manatee-logo.png', alt: 'Manatee Ship Repair & Fabrication Logo', class: 'img-responsive logo-img'), root_path ) %></div>
     <div class="info-block">
     	<div class="phone">941-417-2613</div>
     	<div class="contact">info@manateeshiprepair.com</div>
@@ -22,6 +16,30 @@
 			    <li class="menu-item"><%= link_to "Contact", contact_path %></li>
 				</ul>
 			</div>
-		</div> <!-- info -->
+		</div>
   </div>
+</header>
+ -->
+
+
+<header class="header-s3">
+	<div class="logo-block"><%= link_to(image_tag( 'manatee-logo.png', alt: 'Manatee Ship Repair & Fabrication Logo', class: 'img-responsive logo-img'), root_path ) %></div>
+  <div class="info-block">
+  	<div class="top-hlf">
+	  	<div class="phone">941-417-2613</div>
+	  	<div class="contact">info@manateeshiprepair.com</div>
+	  	<div class="quote"><p>Call us for a quote!</p></div>
+		</div>
+
+		<div class="nav-bottom">
+			<hr class="header">
+			<ul class="site-nav">
+		    <li class="menu-item"><%= link_to "Home", root_path %></li>
+		    <li class="menu-item"><%= link_to "All Services", services_path %></li>
+		    <li class="menu-item"><%= link_to "Bondstrand Pipe Repair", bondstrand_pipe_path %></li>
+		    <li class="menu-item"><%= link_to "Project Gallery", photos_path %></li>
+		    <li class="menu-item"><%= link_to "Contact", contact_path %></li>
+			</ul>
+		</div>
+	</div>
 </header>

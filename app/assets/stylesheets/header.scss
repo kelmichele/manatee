@@ -2,44 +2,169 @@
 @import "variables";
 
 
-header {
-	@include sec-default();
-	background-color: $white;
-	padding-top:25px;
-	height:80px;
-	// height: 125px;
-}
-.top {@include sec-default(); padding: 4px 25px; background-color: $dk-blue;
-	.phone, .contact {display: inline-block; float: left; color: $white;}
-	.contact {float: right;}
-}
+header.h1 {
+		@include sec-default();
+		background-color: $white;
+		padding-top:25px;
+		height:80px;
+		// height: 125px;
 
-.header-box{
-	// margin-top: 40px;
-	width: 75%; @include center-block(); background-color: $dk-blue; position: relative; z-index: 10; height:115px;
-
-	.logo-block {width: 25%; display: inline-block; float: left; position: relative; background-color: $blue; height: 100%;}
-	.info-block {width: 75%; display: inline-block; color: $white; padding: 20px 0 8px; text-align: center;
-		.phone, .quote, .contact {display: inline-block; width: 30%; margin:auto;}
-		.phone {float: left;}
-		.contact {float: none;}
-		.quote {font-weight: bold;}
+	.top {@include sec-default(); padding: 4px 25px; background-color: $dk-blue;
+		.phone, .contact {display: inline-block; float: left; color: $white;}
+		.contact {float: right;}
 	}
 
-	hr.header {width:90%; margin: 5px auto 0px; border-top: 1px solid rgba($offwhite, .3);}
+	.header-box{
+		// margin-top: 40px;
+		width: 75%; @include center-block(); background-color: $dk-blue; position: relative; z-index: 10; height:115px;
 
-	.nav-bottom {
-		@include sec-default(); text-align: center;
-	 	background-color: $dk-blue; }
-
-		li.menu-item {display: inline-block; padding-top: 20px; margin-right: 50px;
-			a {color: $offwhite; font-size: 15px; }
+		.logo-block {width: 25%; display: inline-block; float: left; position: relative; background-color: $white; height: 100%; padding:5px;}
+		.info-block {width: 75%; display: inline-block; color: $white; padding: 20px 0 8px; text-align: center;
+			.phone, .quote, .contact {display: inline-block; width: 30%; margin:auto;}
+			.phone {float: left;}
+			.contact {float: none;}
+			.quote {font-weight: bold;}
 		}
-}
 
+		hr.header {width:90%; margin: 5px auto 0px; border-top: 1px solid rgba($offwhite, .3);}
+
+		.nav-bottom {
+			@include sec-default(); text-align: center;
+		 	background-color: $dk-blue; }
+
+			li.menu-item {display: inline-block; padding-top: 20px; margin-right: 50px;
+				a {color: $offwhite; font-size: 15px; }
+			}
+	}
+}
 @include bp(md) {
 
 	.header-box{ width: 90%;
 		.info-block { padding: 15px 10px;}
 	}
 }
+
+
+header.header-custom {
+	@include sec-default();
+	background-color: $white;
+	padding: 5px 75px;
+
+	.logo-block {width: 20%; display: inline-block; float: left; position: relative; padding:5px;}
+
+	.info-block {width: 65%; display: inline-block; color: $black; padding-top: 20px; text-align: center; float: right;
+		.phone, .quote, .contact {display: inline-block; width: 30%; margin:auto;}
+	}
+	hr.header {width:90%; margin: 5px auto 15px; border-top: 1px solid rgba($gray, .2);}
+
+	li.menu-item {display: inline-block; margin-right: 50px;
+		a {color: $blue; font-size: 15px; }
+	}
+}
+
+
+header.header-s3 {
+	@include sec-default();background-color: $dk-blue;
+	position: relative;
+	padding:0;
+	top: 0;
+	clear: both;
+
+	&:before {
+		width: 28%;
+		border-bottom: 0 solid $white;
+		border-top: 110px solid $white;
+		border-left: 0 solid transparent;
+		border-right: 80px solid transparent;
+		content: "";
+		height: 100%;
+		top: 0;
+		left:0;
+		position: absolute;
+	}
+
+
+	.logo-block {width: 20%; background-color: $white; display: inline-block; float: left; position: relative; .logo-img { width: 80%;float: right;padding: 5px 0;}}
+
+	.info-block {width: 80%; display: inline-block; color: $black; text-align: center; float: right;
+		.top-hlf {@include sec-default(); background-color: $dark;}
+		.phone, .quote, .contact {display: inline-block; width: 30%; margin:auto; padding-top:5px; color:$white;}
+	}
+	hr.header {width:90%; margin: 5px auto 15px; border-top: 1px solid rgba($gray, .2);}
+	li.menu-item {display: inline-block; margin-right: 50px; margin-top:10px;
+		a {color: $white; font-size: 15px; }
+	}
+}
+
+
+
+
+
+
+// header.header-s3 {
+// 	@include sec-default();
+
+// 	.logo-block {width: 20%; display: inline-block; float: left; position: relative; .logo-img { width: 80%;@include center-block(); padding: 5px 0;}}
+
+// 	.info-block {width: 80%; display: inline-block; color: $black; text-align: center;
+// 		// float: right;
+// 		position: relative;
+// 		padding: 0;
+// 		top: 0;
+// 		clear: both;
+
+// 		&:before {
+// 			width: 100%;
+// 			border-bottom: 0 solid $dk-blue;
+// 			border-top: 120px solid $dk-blue;
+// 			border-right: 0 solid transparent;
+// 			border-left: 100px solid transparent;
+// 			content: "";
+// 			height: 100%;
+// 			right:0;
+// 			top: 0;
+// 			position: absolute;
+// 		}
+// 		.top-hlf {
+// 			@include sec-default();
+// 			position: relative;
+// 			padding: 0;
+// 			top: 0;
+// 			clear: both;
+
+// 			&:before {
+// 				width: 100%;
+// 				border-bottom: 0 solid $teal;
+// 				border-top: 50px solid $teal;
+// 				border-right: 0 solid transparent;
+// 				border-left: 42px solid transparent;
+// 				content: "";
+// 				height: 100%;
+// 				right:0;
+// 				top: 0;
+// 				position: absolute;
+// 			}
+// 		}
+// 		.phone, .quote, .contact {display: inline-block; width: 30%; margin:auto; position: relative; margin-top:15px;}
+// 	}
+// 	hr.header {width:90%; margin: 5px auto 15px; border-top: 1px solid rgba($gray, .2);}
+// 	ul.site-nav {position: relative;}
+// 	li.menu-item {display: inline-block; margin-right: 50px;
+// 		a {color: $white; font-size: 15px; }
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
