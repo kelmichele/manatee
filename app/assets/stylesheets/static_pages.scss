@@ -10,6 +10,10 @@
 	@include bp(md) {padding: 15px 0; }
 }
 
+.simple-header {
+	@include sec-default();
+}
+
 .bg-slant {
 	position: relative;
 	top: 0;
@@ -130,70 +134,12 @@
 	}
 }
 
-.page {
-	.segmenter {
-		height: 40vh;
-		z-index: 0;
-		background-image: url(image_path('welding2.jpg'));
-		background-position: center center;
-	}
-
-	.trigger-headline { padding-top:14%;
-		h1 {letter-spacing: 1.5vw; font-weight: bold; font-size: 4vw;}
-		h2 {letter-spacing: .7vw; font-weight: bold; font-size: 2vw;}
-	}
-	p {font-size: 16px; }
-
-	.intro-banner {@include sec-default();
-		.block1 {width:65%; @include center-block(); background-color: $white; position: relative; z-index: 10; padding:60px 0 70px;}
-		img{display: inline-block; width:32%; float: left; }
-		.text {display: inline-block; width: 68%; float: none; padding: 15px 20px 20px;}
-		h4 {color: $blue; font-weight: bold;}
-		p {padding: 10px;}
-		.contact-link {@include sec-default(); padding:10px 5px; text-align: center; background-color: $blue; color: $white; font-size: 18px;margin-top: 20px;}
-	}
-
-	.top {@include sec-default(); padding: 20px 0 10px; background-color: $dk-blue; text-align: center;
-		h3 {color: $white; text-transform: uppercase;}
-	}
-
-	.lists {@include sec-default(); background-color: $offwhite;
-		// @include sec-bgimage();background-image: url(image_path('welding3.jpg'));background-size: 40%; background-position: center right;  position: relative; z-index: 0;
-		// &::before {@include before(); width:40%; left: 60%; right: 0; background-color: rgba($overlay, .7);}
-		@include sec-bgimage();background-image: url(image_path('welding2.jpg')); background-position: center center; position: relative; z-index: 0;
-		&::before {@include before();  background-color: rgba(7,21,36, .9);}
-
-		h4 {color: $blue; font-weight: bold; margin-bottom: 4px; text-transform: uppercase; span{font-weight: normal;}
-			color:lighten($blue, 40%);
-		}
-		ul { padding-left: 15px; margin-bottom:15px;}
-		li {margin-bottom: 10px; font-size: 16px;text-transform: uppercase;
-			// color: $white;
-		}
-		h3 {font-size: 22px; color: $dk-blue; text-transform: uppercase;
-			color: lighten($blue, 20%); font-weight: bold; margin-left: 10%; margin-bottom: 30px;
-		}
-		.block2 { padding: 50px 0px 25px; @include sec-default();
-			.one, .two {display: inline-block; width:auto; padding:0px 0px 5px 20px; background-color: transparent; vertical-align: top; }
-			.two {margin-left: 3%;}
-			.one {margin-left: 10%; margin-right: 10%;}
-
-			.uno, .dos {display: inline-block; vertical-align: top; margin-left: 15%; li {color:$white;}}
-		}
-	}
-}
-
 .bondstrand-pipe {
 	.segmenter {
 		height: 50vh;
 		background-image: url(image_path('msr6-bw.jpg'));
 		background-position: bottom center;
 		z-index: 0;
-
-		// &::before {
-		// 	@include before ();
-		// 	background-color: rgba($white, .1);
-		// }
 	}
 
 	.trigger-headline { padding-top:20%;
@@ -213,49 +159,49 @@
 
 		li {font-size: 17px; margin-bottom: 10px; }
 
-		.list1 {
-			@include sec-default();
-			@include sec-bgimage();
-			background-size: 40%;
-			background-image: url(image_path('msr1-bw.jpg'));
-			background-position: center left;
-			position: relative;
-			z-index: 0;
-			background-color: $offwhite;
-			padding: 30px 100px;
-			h4 {float: left; width:35%; text-align: center; margin-top:20px; border: 1px solid $blue; padding:40px; }
-			ul{width: 55%; float: right; margin: 20px 0;}
+		// .list1 {
+		// 	@include sec-default();
+		// 	@include sec-bgimage();
+		// 	background-size: 40%;
+		// 	background-image: url(image_path('msr1-bw.jpg'));
+		// 	background-position: center left;
+		// 	position: relative;
+		// 	z-index: 0;
+		// 	background-color: $offwhite;
+		// 	padding: 30px 100px;
+		// 	h4 {float: left; width:35%; text-align: center; margin-top:20px; border: 1px solid $blue; padding:40px; }
+		// 	ul{width: 55%; float: right; margin: 20px 0;}
 
-			&::before {
-				@include before ();
-				background-color: rgba($dk-blue, .9);
-				z-index: -1;
-			}
+		// 	&::before {
+		// 		@include before ();
+		// 		background-color: rgba($dk-blue, .9);
+		// 		z-index: -1;
+		// 	}
 
-			&.v2 {
-				background-size: 50%;
-				background-position: center right;
+		// 	&.v2 {
+		// 		background-size: 50%;
+		// 		background-position: center right;
 
-				h4 {width: 45%; border: none; color:$white; padding:30px 0px; }
-				ul{width: 40%; color:$white;}
-			}
-		}
-		.list2 {
-			@include sec-default();
-			background-color: $blue;
-			h4 {color: $blue;}
-			ul {margin: 20px 0; color: $black}
-		}
+		// 		h4 {width: 45%; border: none; color:$white; padding:30px 0px; }
+		// 		ul{width: 40%; color:$white;}
+		// 	}
+		// }
+		// .list2 {
+		// 	@include sec-default();
+		// 	background-color: $blue;
+		// 	h4 {color: $blue;}
+		// 	ul {margin: 20px 0; color: $black}
+		// }
 
-		.list3 {
-			@include sec-default();
-			padding:40px;
-			color: $blue;
-			h4 {color: $blue; width: 35%; display: inline-block;}
-			ul {width: 55%; display: inline-block;}
+		// .list3 {
+		// 	@include sec-default();
+		// 	padding:40px;
+		// 	color: $blue;
+		// 	h4 {color: $blue; width: 35%; display: inline-block;}
+		// 	ul {width: 55%; display: inline-block;}
 
-			li {width: 45%; display: inline-block;}
-		}
+		// 	li {width: 45%; display: inline-block;}
+		// }
 	}
 
 	.bondstrand-body.v2 {
@@ -358,7 +304,7 @@
 	.contact-box { @include sec-default(); @include sec-bgimage(); padding:30px; background-color: $blue; color: $white;}
 }
 
-.services {
+.page {
 
 	.custom-hd {
 		@include sec-default();
@@ -408,7 +354,102 @@
 	}
 }
 
+.services {
+	.custom-hd {
+		@include sec-default();
+		background-color: $light;
+		@include sec-bgimage();
+		background-attachment: fixed;
+		background-image: url(image_path('industry.png'));
+		padding: 30px 50px 0px;
+		text-align: center;
+		h1{ text-transform:uppercase; font-weight: bold; font-size: 3vw; margin-top:40px; margin-bottom: 0; color: $dk-teal; }
+	}
 
+	.intro-banner-alt { @include sec-default(); padding:60px 0;
+		.inner {width: 80%; @include center-block();}
+
+		.block1 {width:54%; padding: 0 50px; float: left;
+			display: inline-block;
+		}
+		.link {display: inline-block;float: none; width:40%;}
+		h4 {color: $blue; font-weight: bold;}
+		p {padding: 10px 20px;}
+		.contact-link {@include sec-default();text-align: center; color: $white; font-size: 22px; font-weight: bold; font-family: $kanit; text-transform: uppercase;
+			@include sec-bgimage(); background-image: url(image_path('map.png'));
+			.overlay{@include sec-default(); height:100%; padding: 40px; background-color: rgba($teal, .8);}
+		}
+	}
+
+	i {font-size: 40px;}
+	.teaser {
+		position: relative;
+		overflow: visible;
+
+		.round-icon{font-size: 35px;border-radius: 50%;
+			width: 2em;
+			height: 2em;
+			text-align: center;
+			vertical-align: bottom;
+			@include ease();background-color: $dk-teal;
+
+			i {line-height: 2em;@include ease();
+				font-size: 1.8em;
+				line-height: 1.3em;
+				color: $teal;
+			}
+		}
+
+	 	hr {margin: 10px 0 15px; width:75%;}
+		h4 {margin-top: 25px;margin-bottom: 0px; line-height: 1em; font-weight:bold;}
+		&:hover .round-icon {background-color: $teal;}
+		&:hover .round-icon i {color: $dark;}
+	}
+
+	.services-s2 {
+		@include sec-default();
+		@include sec-bgimage();
+		background-image: url(image_path('cranes-bay.jpg'));
+		.overlay{@include sec-default(); height:100%; padding: 60px 75px; background-color: rgba($dk-teal, .95);}
+
+		h3.section_header {font-weight: bold; font-size: 30px; font-family: $kanit; color: $white; margin-bottom:25px;}
+
+		.box-padding {
+			background-color: $white;
+			padding:20px 15px;
+			border-bottom: 4px solid $teal;
+
+			&.fab {padding:10px 15px 5px;}
+			&.ballast {margin-top:20px; padding:10px 10px 5px;}
+
+			h3 {color: $teal; font-family: $kanit; text-align: center; text-transform: uppercase; margin-top:15px; line-height: 1.1em;
+				span{font-size: 20px;}
+			}
+			.image_icon {@include center-block(); text-align: center;}
+			ul {padding: 0 25px;}
+			li { font-weight: bold; font-size: 18px; border-bottom: 1px solid rgba($dk-teal, 0.12); padding:15px 0; font-family: $open;
+				color: $dark;
+			 // color: #c5c8e1;
+				&:last-child {border-bottom: none; padding-bottom: 0}
+			}
+
+			.round-icon { @include center-block(); background-color: $teal; i{color: $dk-teal;} }
+
+			&.topside {
+				ul {padding: 0 5px;}
+				li {display: inline-block; margin-left: 20px;
+					 width: 45%;
+					 // width: 30%;
+					&:nth-child(2n+2) {float: right;}
+					&:nth-child(9) {border-bottom: none; padding-bottom: 0}
+					// &:nth-child(3n+3) { float: right}
+				}
+			}
+
+		}
+
+	}
+}
 
 
 // h1{ text-transform:uppercase; position:relative; top: 280px; float: right; z-index:2; font-weight: bold; font-size: 3.5vw; left: 3%; color: $teal;

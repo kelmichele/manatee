@@ -44,25 +44,6 @@ header.h1 {
 	}
 }
 
-
-header.header-custom {
-	@include sec-default();
-	background-color: $white;
-	padding: 5px 75px;
-
-	.logo-block {width: 20%; display: inline-block; float: left; position: relative; padding:5px;}
-
-	.info-block {width: 65%; display: inline-block; color: $black; padding-top: 20px; text-align: center; float: right;
-		.phone, .quote, .contact {display: inline-block; width: 30%; margin:auto;}
-	}
-	hr.header {width:90%; margin: 5px auto 15px; border-top: 1px solid rgba($gray, .2);}
-
-	li.menu-item {display: inline-block; margin-right: 50px;
-		a {color: $blue; font-size: 15px; }
-	}
-}
-
-
 header.header-s3 {
 	@include sec-default();background-color: $dk-blue;
 	position: relative;
@@ -96,3 +77,41 @@ header.header-s3 {
 	}
 }
 
+header.header-style {
+	@include sec-default(); background-color: $white;
+	.logo-block,.phone, .quote, .contact {width: 22%; display: inline-block; float: left; height:100%;}
+	.logo-block { margin-right: 60px;}
+	.phone, .quote, .contact {margin-top:55px;}
+
+	.top{padding-bottom: 25px;}
+
+	.nav-bottom {@include sec-default();
+		background: darken($teal, 10%);
+		// background: -webkit-gradient(linear, left top, right top, color-stop(0%, $teal), color-stop(100%, $dark));
+		// background: -webkit-linear-gradient(left, $teal 0%, $dark 100%);
+		// background: linear-gradient(to right, $teal 0%, $dark 100%);
+		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$mainColor', endColorstr='$mainColor2',GradientType=1 );
+		text-align: center;
+		ul {margin-bottom: 0;}
+		li {display: inline-block;position: relative; padding: 15px 40px;
+
+			&:before,
+		  &:last-child:after {
+				content: '';
+				width: 1px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				background-color: rgba(255, 255, 255, 0.3);
+			}
+
+			&:last-child:after {
+				right: 0;
+				left: auto;
+			}
+
+			a{color: $white; font-weight: bold; text-transform: uppercase;}
+		}
+	}
+}
