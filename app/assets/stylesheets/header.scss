@@ -7,7 +7,6 @@ header.h1 {
 		background-color: $white;
 		padding-top:25px;
 		height:80px;
-		// height: 125px;
 
 	.top {@include sec-default(); padding: 4px 25px; background-color: $dk-blue;
 		.phone, .contact {display: inline-block; float: left; color: $white;}
@@ -79,11 +78,15 @@ header.header-s3 {
 
 header.header-style {
 	@include sec-default(); background-color: $white;
-	.logo-block,.phone, .quote, .contact {width: 22%; display: inline-block; float: left; height:100%;}
-	.logo-block { margin-right: 60px;}
-	.phone, .quote, .contact {margin-top:55px;}
+	// .logo-block,.phone, .quote, .contact {width: 22%; display: inline-block; float: left; height:100%;}
+	.logo-block {width: 22%;display: inline-block; }
+	.info {display: inline-block; width: 70%; float: right; text-align: center;margin-top:35px;height:100%;}
+	.phone, .quote, .contact {width: 32%; display: inline-block; float: left; font-size: 16px;
+		span{ font-weight: bold; color: $teal}
+	}
+	.quote {width:30%; background-color: $teal; color: $white; text-align: center; padding: 10px 0 5px; float: right; border-radius: 20px;}
 
-	.top{padding-bottom: 25px;}
+	// .top{padding-bottom: 25px;}
 
 	.nav-bottom {@include sec-default();
 		background: darken($teal, 10%);

@@ -1,10 +1,12 @@
 <% @page_title = "Contact Us" %>
 <% @page_description = "New Subject" %>
 
-  <%= render 'static_pages/segmenter' %>
-	<!-- <div class="bg"></div> -->
+  <!-- <%= render 'static_pages/segmenter' %>  -->
+<!-- 	<div class="custom-hd">
+		<h1>Contact Us</h1>
+	</div> -->
 
-	<section class="main-section">
+<!-- 	<section class="main-section">
 		<div class="block-sec">
 			<div class="left-blk">
 				<div class="block1">
@@ -50,50 +52,83 @@
 						<%= link_to('View Map', 'https://www.google.com/maps/place/13604+Reeder+Rd,+Palmetto,+FL+34221/@27.6373153,-82.5481234,15z/data=!4m2!3m1!1s0x88c321f1253d981d:0x94e36849ead2e9a4', target: '_blank') %>
 					</h4>
 				</div>
+
+				<%= link_to "View Our Services", services_path, class: 'block link' %>
+
+				<%= link_to "View Our Project Gallery", gallery_path, class: 'block link' %>
 			</div>
 		</div>
-		<!-- <div class="banner">
-				<div class="left">
-					<h3><span>Manatee</span><br> Ship Repair &amp; Fabrication</h3>
-					<p>is located in Tampa Bay’s first port of call, Port Manatee.</p>
-					<hr>
-					<p>Contact Us if you have any questions, or if you would like to request a quote for your specific vessel repair and fabrication needs.</p>
-		    </div>
+ </section> -->
 
-				<div class="right">
-					<h4>941-417-2613</h4>
-		    	<h4>info@manateeshiprepair.com</h4>
-
-					<h4>Frank Kerney <br>908 285 0912<br> frank@manateeshiprepair.com</h4>
-					<h4>Jim Braukman <br>727 212 5234<br> jim@manateeshiprepair.com</h4>
-				</div>
-		</div>
-	</section>
-
+	<div class="custom-hd">
+		<h1>Contact Us</h1>
+	</div>
 	<div class="clearfix"></div>
 
-		<div class="contact-box">
-			<div class="container">
+<section class="main-contact">
+	<div class="contact-box">
+		<div class="inner">
+			<div class="block1">
+				<h2>Port Manatee Ship Repair &amp; Fabrication</h2> <p> is located in Tampa Bay’s first port of call, Port Manatee. Get in touch with us for a quote, or to discuss your specific vessel repair and fabrication needs.</p>
+			</div>
 
-					<h4>Port Manatee Ship Repair and Fabrication, LLC<br>
-						PO Box 2547<br>
-						Oldsmar, FL 34677<br>
-					</h4>
+			<div class="block2">
+				<h4>941-417-2613</h4>
 
-					<h4>Shipping address:<br>
-						210 National Street<br>
-						Palmetto, FL 34221<br>
-						<%= link_to('View Map', 'https://www.google.com/maps/place/210+National+St,+Palmetto,+FL+34221/@27.636639,-82.562465,17z/data=!3m1!4b1!4m2!3m1!1s0x88c31f55f1c85bf3:0x3bd919b1c72ddc3', target: '_blank') %>
-					</h4>
+		  	<h4>info@manateeshiprepair.com</h4>
+		  </div>
 
-					<h4>Located in the Port of Manatee<br>
-						13604 Reeder Road<br>
+			<div class="block3">
+			  <h4 class="address">13604 Reeder Road<br>
 						Palmetto, FL 34221<br>
 						<%= link_to('View Map', 'https://www.google.com/maps/place/13604+Reeder+Rd,+Palmetto,+FL+34221/@27.6373153,-82.5481234,15z/data=!4m2!3m1!1s0x88c321f1253d981d:0x94e36849ead2e9a4', target: '_blank') %>
-					</h4>
+				</h4>
 			</div>
 		</div>
+	</div>
 
- -->
+	<div class="contact-body">
+		<div class="container">
+			<div class="block-a">
+				<div class="card">
+					<h4 class="name">Frank Kerney</h4>
+					<h5><%= number_to_phone(9082850912, delimiter: '-') %></h5>
+					<h5>frank@manateeshiprepair.com</h5>
+				</div>
 
- </section>
+				<span></span>
+
+				<div class="card bottom">
+					<h4 class="name">Jim Braukman</h4>
+					<h5><%= number_to_phone(7272125234, delimiter: '-') %></h5>
+					<h5>jim@manateeshiprepair.com</h5>
+				</div>
+			</div>
+
+			<div class="address-blocks">
+				<!-- <h3>We are located in Tampa Bay’s first port of call, Port Manatee.</h3> -->
+				<!-- 	<div class="block b">
+							<h4 class="address">13604 Reeder Road<br>
+							Palmetto, FL 34221<br>
+							<%= link_to('View Map', 'https://www.google.com/maps/place/13604+Reeder+Rd,+Palmetto,+FL+34221/@27.6373153,-82.5481234,15z/data=!4m2!3m1!1s0x88c321f1253d981d:0x94e36849ead2e9a4', target: '_blank') %>
+						</h4>
+					</div> -->
+
+					<div class="block c">
+						<h4><span>Shipping address:</span></h4>
+							<h4 class="address">210 National Street<br>
+							Palmetto, FL 34221<br>
+							<%= link_to('View Map', 'https://www.google.com/maps/place/210+National+St,+Palmetto,+FL+34221/@27.636639,-82.562465,17z/data=!3m1!4b1!4m2!3m1!1s0x88c31f55f1c85bf3:0x3bd919b1c72ddc3', target: '_blank') %>
+						</h4>
+					</div>
+
+					<div class="block d">
+						<h4><span>Port Manatee Ship Repair and Fabrication, LLC:</span></h4>
+							<h4 class="address">PO Box 2547<br>
+							Oldsmar, FL 34677<br>
+						</h4>
+					</div>
+			</div>
+		</div>
+	</div>
+</section>

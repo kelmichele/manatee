@@ -222,13 +222,10 @@
 		.block1 {width:75%; padding: 0 50px; float: left; display: inline-block;}
 		.link {display: inline-block;float: none; width:40%;}
 
-		// .inner {width: 95%;}
-		// .block0 {width:18%}
-		// .block1 {width:55%; float: none;}
-
 		h4 {font-size: 16px;}
 		.block1 p {padding: 0px 20px; position: relative; float: left; width:45%; display: inline-block;
 			&::before {content: ''; position: absolute; left: 5px; top:5px; height: 30px; width:4px; background-color: $teal;}
+			&.nobef {width:100%; padding:0; &:before {display: none;}}
 		}
 		.contact-link {@include sec-default();text-align: center; color: $dark; font-size: 19px; font-weight: bold;font-family: $kanit;
 			p{font-size: 22px; color: $white;}
@@ -313,62 +310,42 @@
 }
 
 .contact {
+	.custom-hd{background-image: url(image_path('cranes-bay.jpg'));background-position: center center; height: 350px; background-attachment: scroll;}
 
-	.segmenter {
-		height: 30vh;
-		background-image: url(image_path('manatee3.jpg'));
-		background-position: center center;
+	.main-contact {@include sec-default(); background-color: $offwhite;}
+	.contact-box { width: 65%; height: 100%; @include center-block(); background-color: $offwhite; height:100%; margin-top: -60px;
+		.inner {@include sec-default(); padding: 20px 40px;background-color: $offwhite; text-align: center;}
+		h2 {font-weight: bold; color: $teal; font-family: $kanit;}
+		.block1, .block2, .block3 {display: inline-block; width: 45%; float: left; position: relative;}
+		.block1 {@include center-block(); width:75%;}
+		.block2 { float: none; width: 30%;}
+		.block3 {float: none;width: 30%;}
 	}
-	.trigger-headline {padding-top:14%;
-		h1 {letter-spacing: 2vw; font-size: 4.5vw;}
-		h2 {letter-spacing: 1vw; font-weight: bold; font-size: 2vw; display: none;}
+
+	.contact-body {@include sec-default(); padding: 70px 5px 30px; text-align: center;
+		h3 {padding-left: 20px; margin-bottom: 25px; font-weight: bold; color: $dk-teal}
 	}
 
-	.main-section {@include sec-default(); padding: 60px 0; background: $offwhite;}
-	// .banner {
-	// 	background-color: $blue;
-	// 	height:300px;
-	// 	width:70%; @include center-block();
+	.block-a {width: 30%; display: inline-block; float: left; text-align: center; padding: 20px 15px;
+		@include sec-bgimage(); background-image: url(image_path('port-crane.jpg')); background-position:center center; position: relative;z-index: 0; margin-bottom:30px;
+		&::before {@include before (); background-color: rgba($dark, .9);}
+		.card {@include sec-default(); padding-bottom: 20px; &.bottom {padding-bottom: 10px;}}
+		h5 {text-transform: uppercase; color: $white; font-size: 16px;}
+		h4 {text-transform: uppercase; color: $teal; font-weight: bold;}
+	}
+	// .address-blocks {width: 60%; float: right}
+		.block{width: 28%; height: 175px; background-color: $white; padding: 20px 25px; display: inline-block; margin-left: 25px; float: left;
+			span {color: $teal; font-weight: bold; margin-bottom: 25px;}
+			h4.address{padding-left: 20px;}
+			a {font-weight: bold; }
 
-	// 	.left{width:45%; display: inline-block; padding: 30px 40px;
-	// 			color: $white;
-	// 			hr {border-top: 1px solid rgba($white,.3);}
-	// 			span, h3, p {text-transform: uppercase;}
-	// 			span {letter-spacing: 3px; font-weight: bold;}
-	// 			h3 {margin-bottom: 0;}
-	// 	}
-	// 	.right{width:54%;float: right; display: inline-block; background-color:$white; padding: 25px 25px 25px 75px;}
-	// }
-
-	.block-sec {width: 85%; @include center-block();
-		.left-blk{width: 30%; display: inline-block; float: left;
-			.block1 {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('port-crane.jpg')); background-position:center center; position: relative;z-index: 0; padding: 30px; margin-bottom:30px;
-				&::before {@include before (); background-color: rgba($dark, .85);}
-				h3, p {text-transform: uppercase; color: $white;}
-				h3 {font-weight: bold; span{letter-spacing: 3px}}
-			}
-			.block2 {@include sec-default(); background-color:$teal; padding: 30px 15px 30px 45px; color: $dark;
-				h4.name {margin-bottom:5px; font-weight: bold; margin-top:20px;}
-				h5 {margin-top: 0; font-size: 17px;}
-			}
+			// &.b {@include sec-bgimage(); background-image: url(image_path('opac-logo0.png'));
+			// 	background-position:bottom center; background-size: 65%; position: relative;z-index: 0;
+			// 	&::before {@include before(); background-color: rgba($offwhite, .4);}
+			// }
+			&.link{background-color: $teal; font-size: 20px; color: $white; text-align: center; padding: 20px 0; height: auto}
 		}
 
-		.right-blk { width: 65%; display: inline-block; float: right;
-			.block{width: 47%; height: 200px; background-color: $white; padding: 35px 25px 15px 40px; display: inline-block; margin-bottom: 25px;
-				&.a, &.c {float: left;}
-				&.b, &.d {float: right;}
-				&.a {text-align: center; padding: 20px 40px;  @include sec-bgimage(); background-image: url(image_path('opac-logo0.png'));
-					background-position:bottom center; background-size: 80%; position: relative;z-index: 0;
-					&::before {@include before(); background-color: rgba($white, .4);}
-				}
-				span {color: $teal; font-weight: bold; margin-bottom: 25px;}
-				h4.address{padding-left: 20px;}
-				a {font-weight: bold; }
-			}
-		}
-	}
-
-	.contact-box { @include sec-default(); @include sec-bgimage(); padding:30px; background-color: $blue; color: $white;}
 }
 
 .page {
@@ -449,71 +426,6 @@
 	}
 
 	i {font-size: 40px;}
-	// .teaser {
-	// 	position: relative;
-	// 	overflow: visible;
-
-	// 	.round-icon{font-size: 35px;border-radius: 50%;
-	// 		width: 2em;
-	// 		height: 2em;
-	// 		text-align: center;
-	// 		vertical-align: bottom;
-	// 		@include ease();background-color: $dk-teal;
-
-	// 		i {line-height: 2em;@include ease();
-	// 			font-size: 1.8em;
-	// 			line-height: 1.3em;
-	// 			color: $teal;
-	// 		}
-	// 	}
-
-	//  	hr {margin: 10px 0 15px; width:75%;}
-	// 	h4 {margin-top: 25px;margin-bottom: 0px; line-height: 1em; font-weight:bold;}
-	// 	&:hover .round-icon {background-color: $teal;}
-	// 	&:hover .round-icon i {color: $dark;}
-	// }
-
-	// .services-s2 {
-	// 	@include sec-default();
-	// 	@include sec-bgimage();
-	// 	background-image: url(image_path('cranes-bay.jpg'));
-	// 	.overlay{@include sec-default(); height:100%; padding: 60px 75px; background-color: rgba($dk-teal, .95);}
-
-	// 	h3.section_header {font-weight: bold; font-size: 30px; font-family: $kanit; color: $white; margin-bottom:25px;}
-
-	// 	.box-padding {
-	// 		background-color: $white;
-	// 		padding:20px 15px;
-	// 		border-bottom: 4px solid $teal;
-
-	// 		&.fab {padding:10px 15px 5px;}
-	// 		&.ballast {margin-top:20px; padding:10px 10px 5px;}
-
-	// 		h3 {color: $teal; font-family: $kanit; text-align: center; text-transform: uppercase; margin-top:15px; line-height: 1.1em;
-	// 			span{font-size: 20px;}
-	// 		}
-	// 		.image_icon {@include center-block(); text-align: center;}
-	// 		ul {padding: 0 25px;}
-	// 		li { font-weight: bold; font-size: 18px; border-bottom: 1px solid rgba($dk-teal, 0.12); padding:15px 0; font-family: $open;
-	// 			color: $dark;
-	// 		 // color: #c5c8e1;
-	// 			&:last-child {border-bottom: none; padding-bottom: 0}
-	// 		}
-
-	// 		.round-icon { @include center-block(); background-color: $teal; i{color: $dk-teal;} }
-
-	// 		&.topside {
-	// 			ul {padding: 0 5px;}
-	// 			li {display: inline-block; margin-left: 20px;
-	// 				 width: 45%;
-	// 				 // width: 30%;
-	// 				&:nth-child(2n+2) {float: right;}
-	// 				&:nth-child(9) {border-bottom: none; padding-bottom: 0}
-	// 				// &:nth-child(3n+3) { float: right}
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 
