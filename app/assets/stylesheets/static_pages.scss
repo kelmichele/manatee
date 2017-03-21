@@ -310,42 +310,47 @@
 }
 
 .contact {
-	.custom-hd{background-image: url(image_path('cranes-bay.jpg'));background-position: center center; height: 350px; background-attachment: scroll;}
+	.custom-hd{background-image: url(image_path('harbor.jpg'));background-position: bottom center;  background-attachment: scroll; padding:0; text-align: left;
+		.overlay {@include sec-default(); background-color: rgba($dk-teal, .5);height: 180px; padding: 30px 50px 0;}
+	}
+
+	h1 {font-weight: bold; color: $white; font-family: $kanit; @include tshadow($dk-teal); }
+	h2 {font-weight: bold; color: $dk-teal; font-family: $kanit; border: 3px solid $teal; margin-bottom:5px;}
+	p.sub {font-weight: bold; position: relative; font-size: 17px; line-height: 1em; color: $dk-teal;
+		&::before, &::after {content: ''; position: absolute; width:80px; height:10px; background-color: $teal; top:3px;}
+		&::before {left: 0;}
+		&::after {right: 0;}
+	}
+
 
 	.main-contact {@include sec-default(); background-color: $offwhite;}
-	.contact-box { width: 65%; height: 100%; @include center-block(); background-color: $offwhite; height:100%; margin-top: -60px;
-		.inner {@include sec-default(); padding: 20px 40px;background-color: $offwhite; text-align: center;}
-		h2 {font-weight: bold; color: $teal; font-family: $kanit;}
-		.block1, .block2, .block3 {display: inline-block; width: 45%; float: left; position: relative;}
-		.block1 {@include center-block(); width:75%;}
-		.block2 { float: none; width: 30%;}
-		.block3 {float: none;width: 30%;}
+	.contact-box { width: 65%; @include center-block(); padding: 20px 40px; background-color: $offwhite; text-align: center; margin-bottom: 50px;
+		.block2, .block3 {display: inline-block; width: 35%; float: none; vertical-align: top; border: 1px solid #dfdfdf; margin-top: 25px; padding-top: 10px; height: 140px;}
+		.block2{margin-right: 15px; h4{margin-top:20px;}}
+		.block1 {@include center-block(); width:80%; }
 	}
 
-	.contact-body {@include sec-default(); padding: 70px 5px 30px; text-align: center;
-		h3 {padding-left: 20px; margin-bottom: 25px; font-weight: bold; color: $dk-teal}
-	}
+	.contact-body {text-align: center;}
+	.map {background-color: $teal; color: $white; text-align: center; padding: 10px 20px; border-radius: 20px; }
+	.map-br{margin-bottom: 10px;}
+
 
 	.block-a {width: 30%; display: inline-block; float: left; text-align: center; padding: 20px 15px;
 		@include sec-bgimage(); background-image: url(image_path('port-crane.jpg')); background-position:center center; position: relative;z-index: 0; margin-bottom:30px;
 		&::before {@include before (); background-color: rgba($dark, .9);}
-		.card {@include sec-default(); padding-bottom: 20px; &.bottom {padding-bottom: 10px;}}
-		h5 {text-transform: uppercase; color: $white; font-size: 16px;}
+		// .card {@include sec-default(); padding-bottom: 0px; }
+		h5 {text-transform: uppercase; color: $white; font-size: 16px; margin-bottom: 5px;}
 		h4 {text-transform: uppercase; color: $teal; font-weight: bold;}
 	}
-	// .address-blocks {width: 60%; float: right}
-		.block{width: 28%; height: 175px; background-color: $white; padding: 20px 25px; display: inline-block; margin-left: 25px; float: left;
-			span {color: $teal; font-weight: bold; margin-bottom: 25px;}
-			h4.address{padding-left: 20px;}
-			a {font-weight: bold; }
 
-			// &.b {@include sec-bgimage(); background-image: url(image_path('opac-logo0.png'));
-			// 	background-position:bottom center; background-size: 65%; position: relative;z-index: 0;
-			// 	&::before {@include before(); background-color: rgba($offwhite, .4);}
-			// }
-			&.link{background-color: $teal; font-size: 20px; color: $white; text-align: center; padding: 20px 0; height: auto}
-		}
+	.block{width: 30%; height: 175px; background-color: $white; padding: 20px 25px; display: inline-block; margin-left: 25px; float: left;
+		span {color: $teal; font-weight: bold; margin-bottom: 25px;}
+		h4.address{padding-left: 20px;}
+		a {font-weight: bold; }
 
+		&.link{background-color: $teal; font-size: 20px; color: $white; text-align: center; padding: 20px 0; height: auto; margin-top:30px;}
+	}
+	.icon {width:40px; height: auto; @include center-block();}
 }
 
 .page {
