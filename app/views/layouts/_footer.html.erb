@@ -1,1 +1,43 @@
-<footer></footer>
+<footer>
+	<div class="inner">
+		<div class="fblock one">
+			<p>Manatee Ship Repair and Fabrication is conveniently located at the mouth of Tampa Bay. We have an incredibly experienced team, and a reputation for prompt service and quality work. </p>
+
+			<%=image_tag('manatee-logo.png', class: 'img-responsive flogo', alt: 'Manatee Ship Repair and Fabrication footer, logo') %>
+			<!-- <h4>We offer:</h4>
+			<ul>
+				<li>Topside Ship Repairs of all Nature</li>
+				<li>Structural Fabrication</li>
+				<li>Bondstrand Repair and Fabrication</li>
+				<li>Ballast Water Treatment Systems</li>
+			</ul> -->
+		</div>
+
+		<div class="fblock two">
+			<h4>Contact Us for a Quote</h4>
+			<div class="title-line"></div>
+			<p class="border"><%= number_to_phone(9414172613, delimiter: '-') %></p>
+		  <p class="border">info@manateeshiprepair.com</p>
+		  <p>13604 Reeder Road<br> Palmetto, FL 34221</p>
+			<%= link_to('View Map', 'https://www.google.com/maps/place/13604+Reeder+Rd,+Palmetto,+FL+34221/@27.6373153,-82.5481234,15z/data=!4m2!3m1!1s0x88c321f1253d981d:0x94e36849ead2e9a4', target: '_blank', class: 'map') %>
+		</div>
+
+		<div class="fblock three">
+			<!-- <%=image_tag('manatee-logo.png', class: 'img-responsive flogo', alt: 'Manatee Ship Repair and Fabrication footer, logo') %>  -->
+			<h4>We offer:</h4>
+			<div class="title-line"></div>
+			<ul>
+				<li>Topside Ship Repairs of all Nature</li>
+				<li>Structural Fabrication</li>
+				<li>Bondstrand Repair and Fabrication</li>
+				<li>Ballast Water Treatment Systems</li>
+			</ul>
+			<%= link_to('View All Services', services_path, target: '_blank', class: 'slink') %>
+		</div>
+		<span class="div"></span>
+
+		<div class="copy">
+			<p>© 2017 Port Manatee Ship Repair and Fabrication. All rights reserved. Designed by <%=link_to('High Seas Design House', 'http://hsdesignhouse.com', target: '_blank') %>.</p>
+		</div>
+	</div>
+</footer>
