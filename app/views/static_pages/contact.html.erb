@@ -17,8 +17,11 @@
 		</div>
 
 		<div class="block2">
-			<h4><%= number_to_phone(9414172613, delimiter: '-') %></h4>
-	  	<h4 class="email">info@manateeshiprepair.com</h4>
+			<h4><span>Phone: </span><br>
+			<%= number_to_phone(9414172613, delimiter: '-') %></h4>
+
+	  	<h4 class="email"><span>Email: </span><br>
+	  	info@manateeshiprepair.com</h4>
 	  </div>
 
 		<div class="block3">
@@ -29,7 +32,7 @@
 		</div>
 	</div>
 
-	<div class="contact-body">
+	<div class="contact-body"><div class="overlay">
 		<div class="container">
 			<div class="block-a">
 				<div class="card">
@@ -66,5 +69,6 @@
 				<%= link_to "View Our Project Gallery", gallery_path, class: 'block link' %>
 			</div>
 		</div>
-	</div>
+	</div></div>
 </section>
+

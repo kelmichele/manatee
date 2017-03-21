@@ -92,30 +92,67 @@ a:hover {text-decoration: none;}
 
 
 footer {
-    @include sec-default();
-    background-color: $offwhite;
-    padding: 20px 0px 5px;
-    .inner {@include center-block(); width:85%; }
-    .fblock {display: inline-block; padding:10px 25px; float: left;
-        &.one {width: 35%;
-            .flogo {width:60%;}
-        }
-        &.two {width: 30%; margin-left: 4%; p {padding-left:10px; line-height: 1.6em} .border {border-bottom: 1px dotted $font-color; padding-bottom:5px;}}
-        &.three { width: 30%; float: right;
-            li {display:block; width: 100%; }
-        }
-
-        h4 {font-weight: bold; color: $dk-teal; text-transform: uppercase; margin:0;}
+  @include sec-default();
+  background-color: $offwhite;
+  padding: 20px 0px 5px;
+  .inner {@include center-block(); width:85%; }
+  .fblock {display: inline-block; padding:10px 25px; float: left;
+    &.one {width: 35%;
+      .flogo {width:60%;}
     }
-    ul {padding-left:10px; padding-bottom:1px;}
-    li {display: inline-block; width: 49.6%; margin-bottom: 10px;}
-    p, li {font-size: 15px; }
-    .map, .slink {background-color: $teal; color: $white; text-align: center; font-size: 15px; padding: 5px 15px; border-radius: 10px; margin-left:10px;}
-    .title-line{width: 20%; height: 3px; background-color: rgba($dk-teal,.5); margin: 5px 0 20px;}
-    .copy {@include sec-default(); padding: 10px 0 5px;border-top: 1px solid #dfdfdf; margin-top: 30px; p{font-size: 13px; margin-bottom: 0;}}
+    &.two {width: 30%; margin-left: 4%; p {padding-left:10px; line-height: 1.6em} .border {border-bottom: 1px dotted $font-color; padding-bottom:5px;}}
+    &.three { width: 30%; float: right;
+      li {display:block; width: 100%; }
+    }
+    h4 {font-weight: bold; color: $dk-teal; text-transform: uppercase; margin:0;}
+  }
+  ul {padding-left:10px; padding-bottom:1px;}
+  li {display: inline-block; width: 49.6%; margin-bottom: 10px;}
+  p, li {font-size: 15px; }
+  .map, .slink {background-color: $teal; color: $white; text-align: center; font-size: 15px; padding: 5px 15px; border-radius: 10px; margin-left:10px;}
+  .title-line{width: 20%; height: 3px; background-color: rgba($dk-teal,.5); margin: 5px 0 20px;}
+  .copy {@include sec-default(); padding: 10px 0 5px;border-top: 1px solid #dfdfdf; margin-top: 30px; p{font-size: 13px; margin-bottom: 0;}
+    .left{display:inline-block; float: left;}
+    .right{display:inline-block; float: right;}
+  }
+
+  @include bp(tb) {
+    .inner {width: 95%;}
+
+    .fblock { padding: 10px 15px;
+      &.one {width: 35%; .flogo {width:65%;}}
+      &.two {width: 31%; margin-left: 10px; }
+      &.three { width: 31%;}
+    }
+  }
+
+  @include bp(md) {
+    .inner {@include sec-default(); padding: 15px;}
+    .fblock { padding: 10px;
+      &.one {width:80%; @include center-block(); margin-bottom:15px;
+        .flogo {width:35%; @include center-block();}
+      }
+      &.two, &.three {width:45%; padding-top:20px;}
+    }
+  }
+
+  @include bp(sm) {
+    .fblock { padding: 10px;
+      &.one .flogo {width:45%; }
+      &.two, &.three {width:70%; @include center-block(); }
+      &.two {margin-bottom: 20px;}
+    }
+    .copy{padding-bottom:0; margin-top:15px; .left, .right {width: 100%; text-align: center;}}
+  }
+
+    @include bp(xs) {
+    .fblock {
+      &.one .flogo {width:50%; }
+      &.two, &.three {width:95%}
+    }
+    .copy{padding-bottom:0; margin-top:15px; .left, .right {width: 100%; text-align: center;}}
+  }
 }
-
-
 
 @font-face {
   font-family: 'oildrop-icons';
