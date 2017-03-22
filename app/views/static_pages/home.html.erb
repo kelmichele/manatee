@@ -1,7 +1,29 @@
 <% @page_title = "Manatee Ship Repair & Fabrication" %>
 <% @page_description = "New Subject" %>
 
-  <%= render 'static_pages/segmenter' %>
+  <!--  render 'static_pages/segmenter' %>  -->
+  	<script>document.documentElement.className = 'js';</script>
+		<section class="demo-1">
+			<main>
+				<div class="segmenter"></div>
+				<div class="trigger-headline trigger-headline--hidden">
+					<h1>Port Manatee</h1>
+					<h2>Ship Repair &amp; Fabrication</h2>
+				</div>
+			</main>
+			<script>
+			(function() {
+				var headline = document.querySelector('.trigger-headline'),
+					trigger = document.querySelector('.segmenter'),
+					segmenter = new Segmenter(document.querySelector('.segmenter'), {
+						onReady: function() {
+								segmenter.animate();
+								headline.classList.remove('trigger-headline--hidden');
+						}
+					});
+			})();
+			</script>
+		</section>
 
 	<section class="main-content">
 		<div class="intro-card">
