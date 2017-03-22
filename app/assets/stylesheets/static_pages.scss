@@ -169,53 +169,87 @@
 }
 
 .home {
+	header.header-style {
+		.quote {background-color: $offwhite; color: $dk-teal}
+		.nav-bottom {
+			background: $offwhite;
+			li {
+				&:before,
+			  &:last-child:after {background-color: rgba($dk-teal, 0.1);}
+				a {color: $dk-teal}
+			}
+		}
+
+	}
 	.segmenter {
-		height: 85vh;
-		background-image: url(image_path('manatee1.jpg'));
+		height: 80vh;
+		background-image: url(image_path('cover.jpg'));
 		background-position: center center;
 	}
 	.trigger-headline { padding-top:13.5%;}
 
-	.intro-card {height: 390px;margin-top: 40px;margin-bottom: 55px; width: 85%; @include center-block(); padding:40px;
-		background-color: $offwhite; @include sec-bgimage(); background-size: 40%; background-image: url(image_path('msr1.jpg'));
-
-		// .block.left{display: inline-block; width: 45%; float: left;  background-color: $white; padding:4px; box-shadow: 10px 5px 40px rgba($dark, .3); position: relative;}
-		.block.right {display:inline-block; float: right; width: 60%; text-align: center; margin-top: 15px;}
-		h3 {margin-bottom: 15px; font-weight: bold; text-transform: uppercase; font-size: 22px;}
-		p { padding: 0 15px;
-			&.last {font-weight: bold; margin-bottom: 40px;}
+	.home-s1 {
+		@include sec-default(); @include sec-bgimage(); background-image: url(image_path('industrial.png'));background-position: bottom center;
+		.overlay{@include sec-default(); padding: 50px 0px; background-color: rgba($white, .87);}
+		.left-block {display: inline-block; float: left; width: 55%; }
+		.right-block {display: inline-block; float: none; width: 36%; margin-left: 3%;}
+		.r1, .r2 {display: inline-block; float: left; width:50%; }
+		.r2{margin-top: 55px}
+		.img-square {width: 200px; height: auto;
+			&.one { margin-bottom: 12px;}
+			&.two {}
+			&.three { margin-bottom: 12px;}
+			&.four {}
 		}
+		h4 {font-weight: bold;text-transform: uppercase;}
+		h5 {font-size: 16px}
+		.icon {width:10%; height:auto;}
+
 		.service-link {
-			display: inline-block; width: 40%;
-			border: 2px solid $blue;background-color: $dk-teal;
+			display: inline-block; width: 40%; text-align: center;background-color: $dk-teal;
 			color: $white; padding: 10px; font-size: 16px;
 			@include ease ();
 			&.left {margin-right:7%;}
-			&:hover {background-color: $dk-blue;}
+			&:hover {background-color: $teal;}
 		}
+		ul {padding-bottom: 5px;}
+		li {font-size: 16px; margin-bottom: 15px;}
+		i {font-size: 22px; margin-right: 2px; display: inline-block; color: $dk-teal;}
 	}
 
-	.bg-overlay {@include sec-default();
-		.inner {width:80%; @include center-block();}
-		h3 { font-weight: bold; text-transform: uppercase; margin-bottom: 10px; color: $sand; span {font-weight: normal;font-size: 18px;}}
+	// .bg-overlay {@include sec-default();
+	// 	.inner {width:80%; @include center-block();}
+	// 	h3 { font-weight: bold; text-transform: uppercase; margin-bottom: 10px; color: $sand; span {font-weight: normal;font-size: 18px;}}
 
-		.left, .right {height: 350px;display: inline-block; position: relative; z-index: 0; @include sec-bgimage();
-			&::before {@include before();background-color: rgba($dark, .85);}
-		}
-		.left { width:65%;  float: left; background-image: url(image_path('manatee3.jpg')); padding: 55px 0px;
+	// 	.left, .right {height: 350px;display: inline-block; position: relative; z-index: 0; @include sec-bgimage();
+	// 		&::before {@include before();background-color: rgba($dark, .85);}
+	// 	}
+	// 	.left { width:65%; float: left; background-image: url(image_path('manatee3.jpg')); background-position: center center; padding: 55px 0px;
 
-			h3, h4, p {color: $sand;}
-			p { padding: 0 15px;
-				&.last {font-weight: bold; font-size: 17px;}
-			}
-			h4 {margin-bottom: 4px;}
-			.title-line{width: 45%; height: 1px; border-top: 1px solid rgba($sand,.5); margin-bottom: 25px;}
-		}
+	// 		h3, h4, p {color: $sand;}
+	// 		p { padding: 0 15px; font-size: 17px;
+	// 			&.last {font-weight: bold; font-size: 17px;}
+	// 		}
+	// 		h4 {margin-bottom: 4px;}
+	// 		.title-line{width: 45%; height: 1px; border-top: 1px solid rgba($sand,.5); margin-bottom: 25px;}
+	// 	}
 
-		.right { width:34%; float: right; padding: 50px 20px 0; background-image: url(image_path('msr1.jpg'));
-			.inner { border: 1px solid $white; padding:30px 40px 20px; text-align: center;}
-			h3 {line-height: 1.5em;}
+	// 	.right { width:34%; float: right; padding: 50px 20px 0; background-image: url(image_path('msr1.jpg'));
+	// 		.inner { border: 1px solid $white; padding:30px 40px 20px; text-align: center;}
+	// 		h3 {line-height: 1.5em;}
+	// 	}
+	// }
+
+	.bg-overlay {@include sec-default();height: 350px;display: inline-block; position: relative; z-index: 0; @include sec-bgimage(); float: left; background-image: url(image_path('river.jpg')); background-position: center center;
+		&::before {@include before();background-color: rgba($dark, .85);}
+		.inner {width:70%; padding: 55px 0px; margin-left: 10%;}
+		h3 { font-weight: bold; text-transform: uppercase; margin-bottom: 10px; span {font-weight: normal;font-size: 18px;}}
+		h3, h4, p {color: $sand;}
+		p { padding: 0 15px; font-size: 17px; line-height: 1.5em;
+			&.last {font-weight: bold; color: $teal; font-size: 18px; @include tshadow($dark);}
 		}
+		h4 {margin-bottom: 4px;}
+		.title-line{width: 45%; height: 1px; border-top: 1px solid rgba($sand,.5); margin-bottom: 25px;}
 	}
 
 	@include bp(md) {
