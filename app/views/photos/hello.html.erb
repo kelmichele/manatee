@@ -13,8 +13,23 @@
 		ID: <%= params[:id] %><br />
 		Page: <%= @page %><br />
 		Next page: <%= @page.to_i + 1 %><br />
+
 </div>
 
 <div class="clearfix"></div><br><br>
+	<% $id = 0 %>
+	<% $max = 3 %>
+	<% while $id < $max  do %>
+		<% src = $id +=1 %>
+		<% tag = "(image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery#{src}.jpg', class: 'img-responsive gall'), image_path('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery#{src}.jpg') " %>
+
+			<%= "link_to#{tag}"%>
+
+			<div class="clearfix"></div><br><br>
+	<% end %>
+
+
+
+
 <div class="clearfix"></div><br><br>
 <div class="clearfix"></div><br><br>

@@ -5,19 +5,19 @@
 		<h1>Manatee Project Gallery </h1>
 	</div>
 
-
-	<!-- <%= link_to(image_tag('gallery/manateegalleryt.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 4', class: 'img-responsive gall'), image_path('gallery/manateegalleryt.jpg'), data: { lightbox: "example-set", title: 'Image ' }) %>  -->
-
 <section class="project-gallery">
 	<div>
-		<%= link_to(image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery1.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 1', class: 'img-responsive gall'), image_path('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery1.jpg'), data: { lightbox: "example-set", title: 'Image 1' }) %>
+		<% $i = 0 %>
+		<% $max = 86 %>
+		<% while $i < $max  do %>
+			<% tag = $i +=1 %>
+			<% link = "https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery"+"#{tag}"+".jpg" %>
+			<% target = "https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery"+"#{tag}"+".jpg" %>
 
-    <%= link_to(image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery2.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 2', class: 'img-responsive gall'), image_path('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery2.jpg'), data: { lightbox: "example-set", title: 'Image 2' }) %>
-
-    <%= link_to(image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery3.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 3', class: 'img-responsive gall'), image_path('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery3.jpg'), data: { lightbox: "example-set", title: 'Image 3' }) %>
-
-    <%= link_to(image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery4.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 4', class: 'img-responsive gall'), image_path('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery4.jpg'), data: { lightbox: "example-set", title: 'Image 4' }) %>
-
-    <%= link_to(image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery5.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 5', class: 'img-responsive gall'), image_path('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery5.jpg'), data: { lightbox: "example-set", title: 'Image 5' }) %>
+			<%= link_to(image_tag("#{link}", class: 'img-responsive gall', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY'), image_path("#{target}"), data: { lightbox: "example-set"}) %>
+		<% end %>
 	</div>
 </section>
+
+
+<!--<%= link_to(image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery1.jpg', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - Image 1', class: 'img-responsive gall'), image_path('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery1.jpg'), data: { lightbox: "example-set", title: 'Image 1' }) %>-->

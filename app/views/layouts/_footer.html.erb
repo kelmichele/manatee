@@ -33,17 +33,26 @@
 			<div class="right"><p>All rights reserved. Designed by <%=link_to('High Seas Design House', 'http://hsdesignhouse.com', target: '_blank') %>.</p></div>
 		</div>
 	</div>
+  <!-- <a href="#" class="scroll-up">Scroll</a> -->
+  <a href="#" class="scroll-up">Scroll<i class="fa fa-up"></i></a>
+
 </footer>
 <!-- Off Canvas Menu -->
 <div class="offcanvas-menu">
-    <a class="close-offcanvas" href="#"><i class="fa fa-close"></i></a>
+		<div class="tmod">
+	    <h3 class="module-title">Main Menu</h3>
+	    <a class="close-offcanvas" href="#"><i class="rt-icon2-triangle-right"></i></a>
+	  </div>
+
     <div class="offcanvas-inner">
         <div class="module">
-            <h3 class="module-title">Main Menu</h3>
-
             <div class="module-content">
               <ul class="nav menu">
                 <%= render 'layouts/nav' %>
+                <li class="quote">
+                	Contact Us for a Quote:<br>
+                	<%= number_to_phone(9414172613, delimiter: '-') %>
+                </li>
               </ul>
             </div>
         </div>

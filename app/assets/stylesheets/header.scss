@@ -96,21 +96,25 @@ header.header-style {
 }
 
 
-.offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white; background:$dark}
 .offcanvas-menu .offcanvas-inner .module .menu .nav-child a{padding:4px 25px}
 .offcanvas-menu .menu ul li{position:relative}
 
-.close-offcanvas{position:absolute; top:15px; right:15px; z-index:1; color:$white; border:2px solid #eee; border-radius:100%; width:22px; height:22px; line-height:18px; text-align:center; font-size:12px}
+.tmod{@include sec-default(); background-color: $dark; padding: 10px 0 5px; h3{color: $teal; font-weight: bold; text-align: center;}}
+.close-offcanvas{position:absolute; top:15px; right:15px; z-index:1; background-color: $white; color:$dark; border:1px solid #eee;
+	border-radius:100%; width:25px; height:25px; line-height:1em; text-align:center; font-size:22px}
 .close-offcanvas:hover{background:$black; color:$white}
 
 .offcanvas-menu{width:280px; height:100%; background:darken($dk-teal, 10%); color:$white; position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll;
-  .offcanvas-inner{padding:20px;}
-  .module{margin-top:20px;
+  .offcanvas-inner{padding:20px;@include sec-default();}
+  .module{margin-top:0px;
       ul{margin:0 -20px;
           li { margin-bottom:15px; padding-bottom:5px; padding-left: 15px; border-bottom:1px solid rgba($white, .4);
+          	&:nth-child(5){margin-bottom: 0;}
+            &.quote {background-color: $teal; padding: 5px 15px; color: $dark; font-weight: bold;}
               a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:7px 0; padding-left:0px; color: $white; font-size: 14px; line-height: 1.5em;}
               a:hover{background:transparent;}
               &:first-child{margin-top:0}
+
           }
       }
   }
@@ -125,7 +129,7 @@ header.header-style {
 .offcanvas .body-innerwrapper:after{width:100%; height:100%; opacity:1; -webkit-transition:opacity 0.5s; transition:opacity 0.5s}
 .offcanvas .offcanvas-menu{opacity:1}
 .menu .nav-child.small{font-size:inherit}
-h3.module-title{color: $white;}
+// h3.module-title{color: $white;}
 .menu .nav-child.small{font-size:inherit}
 
 

@@ -479,16 +479,33 @@
 	}
 }
 
-.photos, .gallery {
-	.segmenter {
-		height: 35vh;
-		background-image: url(image_path('manatee1.jpg'));
-	}
-	.project-gallery {
+.photos {
+	.custom-hd {background-image: none; h1 {margin-top: 25px;}}
+	.project-gallery { text-align: center;
 		@include sec-default(); padding: 55px 40px;
+		.gall {width: 19.5%; display: inline-block; padding:5px; margin-bottom: 20px; max-height: 200px;}
+	}
 
-		// .gall {width: 200px; height: 200px; display: inline-block; padding:5px; margin-bottom: 20px;}
-		.gall {width: 19.5%; display: inline-block; padding:5px; margin-bottom: 20px;}
+	@include bp(tb) {
+		.project-gallery .gall {width: 24%; }
+	}
+
+	@include bp(md) {
+		.project-gallery {padding: 35px 20px;
+			.gall {max-height: 134px;}
+		}
+	}
+
+	@include bp(mb) {
+		.project-gallery {
+			.gall {width: 32%; }
+		}
+	}
+
+	@include bp(xs) {
+		.project-gallery {padding: 20px;
+			.gall {width: 48%;}
+		}
 	}
 }
 

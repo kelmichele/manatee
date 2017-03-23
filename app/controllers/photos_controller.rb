@@ -5,6 +5,11 @@ class PhotosController < ApplicationController
     @image = [@image_src, @image_title, @image_path]
     @linkto = "<%= link_to(image_tag('gallery/#@image_src', alt: 'MANATEE SHIP REPAIR AND FABRICATION PROJECT GALLERY - #@image_title', class: 'img-responsive'), image_path('#@image_path'), data: { lightbox: 'example-set', title: '#@image_title' }) %>"
 
+    @link = "<%= image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery"
+    @end = ".jpg', class:'img-responsive')%>"
+    @ab = [1,2,3]
+    @gallery = "<%= image_tag('https://s3.amazonaws.com/manatee-ship/gallery/manatee-gallery#@image_src.jpg', class: 'img-responsive gall') %>"
+
   	def show_photo()
   		puts linkto
     end
@@ -15,6 +20,8 @@ class PhotosController < ApplicationController
     @array = [1,2,3,4,5]
     @id = params['id']
     @page = params[:page]
+    @image = params[:image]
+
     render('hello')
   end
 
